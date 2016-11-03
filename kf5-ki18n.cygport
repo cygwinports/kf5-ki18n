@@ -1,7 +1,7 @@
 inherit kf5
 
 NAME="kf5-ki18n"
-VERSION=5.12.0
+VERSION=5.27.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE 5 text internationalization library"
@@ -25,3 +25,9 @@ libKF5I18n_devel_CONTENTS="
 	${QT5_MKSPECSDIR#/}/modules/qt_KI18n.pri
 	usr/lib/libKF5I18n.dll.a
 "
+
+src_install() {
+	cd ${B}
+	cyginstall
+	chmod +x ${D}/usr/lib/cmake/KF5I18n/ts-pmap-compile.py
+}
