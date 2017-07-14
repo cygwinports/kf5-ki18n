@@ -2,13 +2,15 @@ inherit kf5
 
 NAME="kf5-ki18n"
 VERSION=5.35.0
-RELEASE=1
+RELEASE=2
 CATEGORY="Libs"
 SUMMARY="KDE 5 text internationalization library"
 DESCRIPTION="KI18n provides functionality for internationalizing user interface
 text in applications, based on the GNU Gettext translation system. It wraps the
 standard Gettext functionality, so that the programmers and translators can use
 the familiar Gettext tools and workflows."
+
+PATCH_URI="5.35.0-install-ts.patch"
 
 PKG_NAMES="libKF5I18n5 libKF5I18n-devel"
 libKF5I18n5_CONTENTS="
